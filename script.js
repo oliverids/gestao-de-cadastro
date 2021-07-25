@@ -7,7 +7,7 @@ let carrinho = new Array();
 let produtos = new Array();
 let soma = 0;
 
-fetch('http://localhost:3000/produtos')
+fetch('http://localhost:3000/db')
     .then(r => r.json())
     .then(json => {
         lista.forEach(e => {
@@ -91,5 +91,8 @@ fetch('http://localhost:3000/produtos')
             } else {
                 alert('Digite seu nome e um email para finalizar a compra!')
             }
+
+
         }
+
     })
