@@ -1,8 +1,10 @@
 let favadd = document.querySelectorAll('.btn-add'),
     lista = Array.from(favadd);
 
+const comprar = document.getElementById('comprar');
 
 let carrinho = new Array();
+let produtos = new Array();
 let soma = 0;
 
 fetch('http://localhost:3000/produtos')
@@ -11,7 +13,6 @@ fetch('http://localhost:3000/produtos')
         lista.forEach(e => {
             e.addEventListener('click', () => {
                 let index = lista.indexOf(e);
-                // console.log(json[index].foto);
 
                 //CRIA CARRINHO
                 (() => {
@@ -31,12 +32,12 @@ fetch('http://localhost:3000/produtos')
                     let listaC = document.querySelector('.c-itens');
                     listaC.appendChild(novoItem.firstElementChild);
                     carrinho.push(json[index].preco);
+                    produtos.push(json[index].nome);
 
                     //PREÇO
                     let total = document.querySelector('.total span');
                     function Total() {
                         soma += json[index].preco;
-                        // console.log(soma);
                         total.innerText = `R$ ${soma},00`
                     }
                     Total();
@@ -48,21 +49,47 @@ fetch('http://localhost:3000/produtos')
                             e.addEventListener('click', (event) => {
                                 listaC.removeChild(event.target.parentNode);
                                 let precoitem = event.target.previousElementSibling.children[1].children[1].innerText,
-                                    precoitem2 = parseInt(precoitem.substring(2,5));
+                                    precoitem2 = parseInt(precoitem.substring(2, 5));
                                 soma -= precoitem2;
-                                console.log(soma);
                                 total.innerText = `R$ ${soma},00`
                             })
                         })
                     }
                     apagaItem();
-
-                    //CADASTRO
-                    function cadastro() {
-                        
-                    }
-
                 })();
             })
         })
+
+
+        //CADASTRO
+        const comprar = document.getElementById('comprar');
+        comprar.addEventListener('click', cadastro)
+
+
+
+        function cadastro() {
+            let nomeinput = document.getElementById('nome'),
+                emailinput = document.getElementById('email'),
+                nome = nomeinput.value,
+                email = emailinput.value;
+
+                function salva() {
+                    localStorage.setItem('nome', nome);
+                    localStorage.setItem('email', email);
+                    localStorage.setItem('precoTotal', `R$${soma},00`);
+                    localStorage.setItem('produtos', produtos.toString());
+
+
+                    
+                }
+
+            if(nome.length !== 0 && email.length !==0 && email.includes('@')) {
+                alert('Cadastro realizado! Você será logo direcionado à página de pagamento.')
+                salva();
+            } else if (!email.includes('@')){
+                alert('Digite um email válido')
+            } else {
+                alert('Digite seu nome e um email para finalizar a compra!')
+            }
+        }
     })
