@@ -1,0 +1,53 @@
+header {
+    background: $azul-escuro;
+    padding: 14px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 a {
+            color: $branco;
+        }
+
+        .menu {
+            button {
+                background: none;
+                border: none;
+
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+    }
+}
+
+.pesquisa {
+    margin: 28px auto;
+    
+    div {
+        max-width: 100%;
+        display: flex;
+
+        input {
+            background: $branco;
+            border: $azul-escuro solid 0.5px;
+            border-radius: 5px 0 0 5px;
+            padding-left: 12px;
+            flex-grow: 2;
+            font-size: 1em;
+        }
+
+        button {
+            flex-grow: 1;
+            max-width: 40px;
+            background: $azul-escuro;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            padding: 6px 4px;
+        }
+    }
+}

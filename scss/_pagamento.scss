@@ -1,0 +1,81 @@
+.cadastro {
+    background: $azul-escuro;
+    padding: 20px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .user-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+
+            .nome, .email, .cep {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1.2em;
+
+                label {
+                    margin-bottom: 16px;
+                    font-size: 1em;
+                    color: $branco;
+                    font-weight: $semi;
+                }
+
+                input {
+                    border: none;
+                    padding: 10px 12px;
+                    border-radius: 4px;
+                }
+
+            }
+        }
+
+        .total {
+            border-top: $laranja solid 0.8px;
+            padding-top: 1.2em;
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+                font-size: 1.5em;
+                text-align: center;
+                color: $branco;
+            }
+
+            span {
+                font-size: 2.3em;
+                font-weight: $exbold;
+                color: $laranja;
+                margin: 0.8em 0;
+                text-align: center;
+            }
+
+            button {
+                display: block;
+                margin: 0 auto;
+                padding: 16px 28px;
+                font-size: 1.4em;
+                font-weight: $bold;
+                border-radius: 2px;
+                border: none;
+                background: $branco;
+                color: $azul-escuro;
+                transition: .3s;
+            }
+            button:hover {
+                background: #a1bac0;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+footer {
+    background: #0a1118;
+    padding: 20px 0;
+}

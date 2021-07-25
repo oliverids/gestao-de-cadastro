@@ -1,0 +1,32 @@
+[
+    {
+        "nome": "Camisa Kiikii Original",
+        "preco": 199,
+        "foto": "produtos/camisa1.jpg"
+    },
+    {
+        "nome": "Camisa Cobbles Classie",
+        "preco": 99,
+        "foto": "produtos/camisa2.jpg"
+    },
+    {
+        "nome": "Relógio Vintage IWC",
+        "preco": 389,
+        "foto": "produtos/relogio.jpg"
+    },
+    {
+        "nome": "Kit 2 Calças Tommy Hilfiger",
+        "preco": 659,
+        "foto": "produtos/calca.jpg"
+    },
+    {
+        "nome": "SmartWatch Apple",
+        "preco":389,
+        "foto": "produtos/smartwatch.jpg"
+    },
+    {
+        "nome": "Tênis Adidas Preto",
+        "preco":289,
+        "foto": "produtos/tenis1.jpg"
+    }
+]

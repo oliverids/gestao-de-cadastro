@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashOut - Carrinho de Compras</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h3><a href="#">CashOut</a></h3>
+            <div class="menu">
+                <button><img src="img/menu.svg" id="menu-btn"></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container pesquisa">
+        <div>
+            <input type="text" placeholder="Pesquise algum produto ou marca">
+            <button><img src="img/search.svg"></button>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <h2>Lista de Favoritos</h2>
+            <ul class="produtos">
+                <li class="item"><a>
+                        <div class="imagem">
+                            <img src="produtos/camisa1.jpg">
+                            <p>Camisa Kiikii Original</p>
+                        </div>
+                        <h4>R$199,00</h4>
+                        <button class="btn-add">Adicionar ao Carrinho</button>
+                    </a></li>
+
+                <li class="item"><a>
+                        <div class="imagem">
+                            <img src="produtos/camisa2.jpg">
+                            <p>Camisa Cobbles Classie</p>
+                        </div>
+                        <h4>R$99,00</h4>
+                        <button class="btn-add">Adicionar ao Carrinho</button>
+                    </a></li>
+
+                <li class="item"><a>
+                        <div class="imagem">
+                            <img src="produtos/relogio.jpg">
+                            <p>Relógio Vintage IWC</p>
+                        </div>
+                        <h4>R$389,00</h4>
+                        <button class="btn-add">Adicionar ao Carrinho</button>
+                    </a></li>
+
+                <li class="item"><a>
+                        <div class="imagem">
+                            <img src="produtos/calca.jpg">
+                            <p>2 Calças Levi</p>
+                        </div>
+                        <h4>R$659,00</h4>
+                        <button class="btn-add">Adicionar ao Carrinho</button>
+                    </a></li>
+
+                <li class="item"><a>
+                        <div class="imagem">
+                            <img src="produtos/smartwatch.jpg">
+                            <p>SmartWatch Apple</p>
+                        </div>
+                        <h4>R$389,00</h4>
+                        <button class="btn-add">Adicionar ao Carrinho</button>
+                    </a></li>
+
+                <li class="item"><a>
+                        <div class="imagem">
+                            <img src="produtos/tenis1.jpg">
+                            <p>Tênis Adidas Preto</p>
+                        </div>
+                        <h4>R$289,00</h4>
+                        <button class="btn-add">Adicionar ao Carrinho</button>
+                    </a></li>
+
+            </ul>
+        </div>
+    </main>
+
+    <section class="carrinho">
+        <div class="container">
+            <h3>Carrinho de Compras</h3>
+            <ul class="c-itens">
+                <li>
+                    <div class="info">
+                        <img src="produtos/tenis1.jpg">
+                        <div>
+                            <p id="info-nome">Tênis Adidas Preto</p>
+                            <p id="info-preco">65646545</p>
+                        </div>
+                    </div>
+                    <button id="apaga">Apagar</button>
+                </li>
+                <li>
+                    <div class="info">
+                        <img src="produtos/tenis1.jpg">
+                        <div>
+                            <p id="info-nome">Tênis Adidas Preto</p>
+                            <p id="info-preco">65646545</p>
+                        </div>
+                    </div>
+                    <button id="apaga">Apagar</button>
+                </li>
+                <li>
+                    <div class="info">
+                        <img src="produtos/tenis1.jpg">
+                        <div>
+                            <p id="info-nome">Tênis Adidas Preto</p>
+                            <p id="info-preco">65646545</p>
+                        </div>
+                    </div>
+                    <button id="apaga">Apagar</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cadastro">
+        <div class="container">
+            <div class="user-info">
+                <div class="nome">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome">
+                </div>
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="cep">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep">
+                </div>
+            </div>
+            <div class="total">
+                <h4>Preço total a pagar</h4>
+                <span></span>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+
+</body>
+<script src="script.js"></script>
+
+</html>
