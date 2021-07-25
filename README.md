@@ -3,7 +3,7 @@
 
 <p>Esse projeto foi motivado pelo desafio da 6ª semana do Gama Academy, 2021.</p>
 
-O objetivo desse novo desafio foi criar um simples mecanismo de cadastro de usuários e registro dos produtos adicionaos ao carrinho.
+O objetivo foi criar um simples mecanismo de cadastro de usuários e registro dos produtos adicionaos ao carrinho.
 
 Para esse segundo desafio da Cashout, foi usado Javascript Assíncrono para o fetch de uma API a qual continha as informações dos produtos (como nome, preço e o endereço local da imagem). A API é, na verdade, um [arquivo JSON](https://my-json-server.typicode.com/oliverids/gestao-de-cadastro/produtos) <code>db.json</code> O arquivo foi hospedado em meu [server](https://my-json-server.typicode.com/oliverids/gestao-de-cadastro) remoto a partir do [package JSON Server](https://www.npmjs.com/package/json-server).
 
