@@ -7,9 +7,10 @@ let carrinho = new Array();
 let produtos = new Array();
 let soma = 0;
 
-fetch('http://localhost:3000/db')
+fetch('https://my-json-server.typicode.com/oliverids/gestao-de-cadastro/produtos')
     .then(r => r.json())
     .then(json => {
+        console.log(json)
         lista.forEach(e => {
             e.addEventListener('click', () => {
                 let index = lista.indexOf(e);
@@ -60,12 +61,9 @@ fetch('http://localhost:3000/db')
             })
         })
 
-
         //CADASTRO
         const comprar = document.getElementById('comprar');
         comprar.addEventListener('click', cadastro)
-
-
 
         function cadastro() {
             let nomeinput = document.getElementById('nome'),
@@ -73,26 +71,21 @@ fetch('http://localhost:3000/db')
                 nome = nomeinput.value,
                 email = emailinput.value;
 
-                function salva() {
-                    localStorage.setItem('nome', nome);
-                    localStorage.setItem('email', email);
-                    localStorage.setItem('precoTotal', `R$${soma},00`);
-                    localStorage.setItem('produtos', produtos.toString());
+            function salva() {
+                localStorage.setItem('nome', nome);
+                localStorage.setItem('email', email);
+                localStorage.setItem('precoTotal', `R$${soma},00`);
+                localStorage.setItem('produtos', produtos.toString());
+            }
 
-
-                    
-                }
-
-            if(nome.length !== 0 && email.length !==0 && email.includes('@')) {
+            if (nome.length !== 0 && email.length !== 0 && email.includes('@')) {
                 alert('Cadastro realizado! Você será logo direcionado à página de pagamento.')
                 salva();
-            } else if (!email.includes('@')){
+            } else if (!email.includes('@')) {
                 alert('Digite um email válido')
             } else {
                 alert('Digite seu nome e um email para finalizar a compra!')
             }
-
-
         }
-
     })
+
