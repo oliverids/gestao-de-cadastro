@@ -1,7 +1,7 @@
 <h1 align="center" margin-bottom="32px">CashOut - Gestão de Cadastro</h1>
 <h2 align="center">Gama Academy</h2>
 
-<p>Esse projeto foi motivado pelo desafio da 6ª semana do Gama Academy, 2021.</p>
+<p>Esse projeto foi motivado pelo desafio da 5ª semana do Gama Academy, 2021.</p>
 
 O objetivo foi criar um simples mecanismo de cadastro de usuários e registro dos produtos adicionaos ao carrinho.
 
