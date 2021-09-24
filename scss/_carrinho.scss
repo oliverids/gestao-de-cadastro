@@ -3,67 +3,99 @@
     background: #eede95;
 
     .container {
+        margin: 0 auto;
+        max-width: 800px;
         h3 {
-            margin-bottom: 28px;
+            margin-bottom: 1rem;
             color: $azul-escuro;
             text-align: center;
+        }
+
+        #addalgo {
+            text-align: center;
+            margin-bottom: 1.4rem;
         }
 
         .c-itens {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+
+            @media only screen and (min-width: 768px) {
+                & {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+            }
+
+
 
             li {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
+                display: block;
                 margin-bottom: 1em;
                 background: #f1edd9;
                 padding: 20px;
                 border-radius: 4px;
+                max-width: 50%;
+
+                @media only screen and (min-width: 768px) {
+                    & {
+                        margin: 0 10px 22px 10px;
+                    }
+                }
 
                 .info {
                     display: flex;
                     align-items: center;
-                    flex-direction: column;
+                    justify-content: space-between;
 
                     img {
-                        width: 200px;
+                        width: 80px;
                         border-radius: 4px;
-                        margin-bottom: 12px;
+                        margin-right: 12px;
                     }
 
                     div {
+                        max-width: 120px;
+
                         #info-nome {
                             font-weight: $semi;
                             color: $azul-escuro;
                             margin-bottom: 12px;
+                            text-align: center;
+                            font-size: 0.8rem;
                         }
                         #info-preco {
                             font-weight: $semi;
                             text-align: center;
-                            margin-bottom: 12px;
                         }
                     }
                 }
                 #apaga {
                     background: $vermelho;
                     border: none;
-                    padding: 1em;
+                    margin-left: 1rem;
                     font-size: 1.1em;
                     font-weight: $bold;
                     color: $branco;
                     border-radius: 4px;
                     transition: 0.3s;
+
+                    i {
+                        padding: 10px;
+                    }
+
+                    span {
+                        position: absolute;
+                        left: -9999px;
+                    }
                 }
                 #apaga:hover {
                     background: #bb3324;
-                    transition: .3s;
+                    transition: 0.3s;
                 }
-            }
-            li:last-child {
-                margin-bottom: 0;
             }
         }
     }

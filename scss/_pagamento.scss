@@ -1,6 +1,6 @@
 .cadastro {
     background: $azul-escuro;
-    padding: 20px;
+    padding: 20px 0;
 
     .container {
         display: flex;
@@ -8,16 +8,41 @@
         flex-direction: column;
         flex-wrap: wrap;
 
+        @media only screen and (min-width: 768px) {
+            & {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 800px;
+                margin: 0 auto;
+
+            }
+        }
+
         .user-info {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             flex-direction: column;
+            border-bottom: $laranja solid 0.8px;
+            align-self: center;
+            width: 80%;
+            max-width: 400px;
 
-            .nome, .email, .cep {
+            @media only screen and (min-width: 768px) {
+                & {
+                    max-width: 300px;
+                    border-bottom: none;
+                }
+            }
+
+            .nome,
+            .email,
+            .cep {
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 1.2em;
+                justify-content: center;
 
                 label {
                     margin-bottom: 16px;
@@ -31,28 +56,41 @@
                     padding: 10px 12px;
                     border-radius: 4px;
                 }
-
             }
         }
 
         .total {
-            border-top: $laranja solid 0.8px;
             padding-top: 1.2em;
             display: flex;
             flex-direction: column;
+            align-self: center;
+            width: 80%;
+            max-width: 400px;
 
-            h4 {
-                font-size: 1.5em;
-                text-align: center;
-                color: $branco;
+            @media only screen and (min-width: 768px) {
+                & {
+                    max-width: 300px;
+                    padding: 0;
+                }
             }
 
-            span {
-                font-size: 2.3em;
-                font-weight: $exbold;
-                color: $laranja;
-                margin: 0.8em 0;
-                text-align: center;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h4 {
+                    font-size: 1.5em;
+                    text-align: center;
+                    color: $branco;
+                }
+
+                span {
+                    font-size: 2.3em;
+                    font-weight: $exbold;
+                    color: $laranja;
+                    margin: 1rem 0 0.8rem;
+                    text-align: center;
+                }
             }
 
             button {
@@ -65,11 +103,11 @@
                 border: none;
                 background: $branco;
                 color: $azul-escuro;
-                transition: .3s;
+                transition: 0.3s;
             }
             button:hover {
                 background: #a1bac0;
-                transition: .3s;
+                transition: 0.3s;
             }
         }
     }

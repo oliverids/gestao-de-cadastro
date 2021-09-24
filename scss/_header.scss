@@ -13,12 +13,15 @@ header {
 
         .menu {
             button {
+                padding: 4px 10px;
                 background: none;
                 border: none;
+                color: $branco;
+                margin-left: 1rem;
 
-                img {
-                    width: 48px;
-                    height: 48px;
+                span {
+                    position: absolute;
+                    left: -9999px;
                 }
             }
         }
@@ -26,28 +29,43 @@ header {
 }
 
 .pesquisa {
-    margin: 28px auto;
+    margin: 28px auto 0 auto;
     
+    h2 {
+        margin-bottom: 1.1rem;
+        margin-left: 10px;
+    }
+
     div {
-        max-width: 100%;
+        max-width: 500px;
         display: flex;
+        background: $branco;
+        border: $azul-escuro solid 0.5px;
+        border-radius: 5px;
+        margin-left: 10px;
+
+        &.focus-within {
+            outline-color: $azul-claro;
+        }
 
         input {
-            background: $branco;
-            border: $azul-escuro solid 0.5px;
-            border-radius: 5px 0 0 5px;
+            background: none;
             padding-left: 12px;
             flex-grow: 2;
             font-size: 1em;
+            border: none;
         }
 
         button {
-            flex-grow: 1;
-            max-width: 40px;
+            padding: 12px;
             background: $azul-escuro;
             border: none;
-            border-radius: 0 5px 5px 0;
-            padding: 6px 4px;
+            color: $branco;
+
+            span {
+                position: absolute;
+                left: -9999px;
+            }
         }
     }
 }

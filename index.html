@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0a7be9467a.js" crossorigin="anonymous"></script>
     <title>CashOut - Carrinho de Compras</title>
 </head>
 
@@ -15,28 +16,30 @@
         <div class="container">
             <h3><a href="#">CashOut</a></h3>
             <div class="menu">
-                <button><img src="img/menu.svg" id="menu-btn"></button>
+                <button><i class="fas fa-heart fa-2x"></i><span>Lista de Favoritos</span></button>
+                <button><i class="fas fa-shopping-cart fa-2x"></i></i><span>Carrinho</span></button>
+                <button><i class="fas fa-bars fa-2x"></i><span>Menu</span></button>
             </div>
         </div>
     </header>
 
     <div class="container pesquisa">
+        <h2>Lista de Favoritos</h2>
         <div>
             <input type="text" placeholder="Pesquise algum produto ou marca">
-            <button><img src="img/search.svg"></button>
+            <button><i class="fas fa-search fa-2x"></i><span>Pesquisar</span></button>
         </div>
     </div>
 
     <main>
         <div class="container">
-            <h2>Lista de Favoritos</h2>
             <ul class="produtos">
                 <li class="item"><a>
                         <div class="imagem">
                             <img src="produtos/camisa1.jpg" id="imagem">
                             <p>Camisa Kiikii Original</p>
                         </div>
-                        <h4>R$199,00</h4>
+                        <p class="title">R$199,00</p>
                         <button class="btn-add">Adicionar ao Carrinho</button>
                     </a></li>
 
@@ -45,7 +48,7 @@
                             <img src="produtos/camisa2.jpg" id="imagem">
                             <p>Camisa Cobbles Classie</p>
                         </div>
-                        <h4>R$99,00</h4>
+                        <p class="title">R$99,00</p>
                         <button class="btn-add">Adicionar ao Carrinho</button>
                     </a></li>
 
@@ -54,7 +57,7 @@
                             <img src="produtos/relogio.jpg" id="imagem">
                             <p>Relógio Vintage IWC</p>
                         </div>
-                        <h4>R$389,00</h4>
+                        <p class="title">R$389,00</p>
                         <button class="btn-add">Adicionar ao Carrinho</button>
                     </a></li>
 
@@ -63,7 +66,7 @@
                             <img src="produtos/calca.jpg" id="imagem">
                             <p>2 Calças Levi</p>
                         </div>
-                        <h4>R$659,00</h4>
+                        <p class="title">R$659,00</p>
                         <button class="btn-add">Adicionar ao Carrinho</button>
                     </a></li>
 
@@ -72,7 +75,7 @@
                             <img src="produtos/smartwatch.jpg" id="imagem">
                             <p>SmartWatch Apple</p>
                         </div>
-                        <h4>R$389,00</h4>
+                        <p class="title">R$389,00</p>
                         <button class="btn-add">Adicionar ao Carrinho</button>
                     </a></li>
 
@@ -81,7 +84,7 @@
                             <img src="produtos/tenis1.jpg" id="imagem">
                             <p>Tênis Adidas Preto</p>
                         </div>
-                        <h4>R$289,00</h4>
+                        <p class="title">R$289,00</p>
                         <button class="btn-add">Adicionar ao Carrinho</button>
                     </a></li>
 
@@ -92,8 +95,8 @@
     <section class="carrinho">
         <div class="container">
             <h3>Carrinho de Compras</h3>
+            <p id="addalgo">Adicione um produto ao carrinho.</p>
             <ul class="c-itens">
-
             </ul>
         </div>
     </section>
@@ -111,8 +114,10 @@
                 </div>
             </div>
             <div class="total">
-                <h4>Preço total a pagar</h4>
-                <span>R$0,00</span>
+                <div>
+                    <h4>Preço total a pagar:</h4>
+                    <span>R$0,00</span>
+                </div>
                 <button id="comprar">Comprar</button>
             </div>
         </div>

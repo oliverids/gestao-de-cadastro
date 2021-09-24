@@ -1,65 +1,99 @@
 main {
-    background: hsla(210, 30%, 24%, 0.199);
-    padding: 20px;
-
-    h2 {
-        color: $azul-escuro;
-        text-align: center;
-        margin-bottom: 22px;
-    }
+    padding: 20px 0;
 
     .produtos {
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
+        @media only screen and (min-width: 768px) {
+            & {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (min-width: 1350px) {
+            & {
+                margin: 0;
+            }
+            &::after {
+               content: '';
+               max-width: 630px;
+               height: 300px;
+               flex: auto;
+            }
+        }
+
+        @media only screen and (min-width: 1800px) {
+            &::after {
+               content: none;
+            }
+        }
+
         .item {
-            width: 320px;
-            min-height: 450px;
+            width: 290px;
+            height: 330px;
             padding: 20px;
             background: $branco;
             border-radius: 6px;
             display: flex;
-            flex-wrap: wrap;
+            justify-self: center;
             flex-direction: column;
             margin-bottom: 24px;
 
-            img {
-                border-radius: 6px;
+            @media only screen and (min-width: 768px) {
+                & {
+                    margin: 0 10px 32px 10px;
+                }
             }
 
-            p {
+            .imagem {
+                display: flex;
+                justify-self: center;
+                flex-direction: column;
+
+                img {
+                    border-radius: 6px;
+                    max-width: 160px;
+                    align-self: center;
+                }
+
+                p {
+                    font-size: 1em;
+                    color: $preto;
+                    font-weight: $semi;
+                    margin: 16px 0;
+                    text-align: center;
+                }
+            }
+
+            .title {
                 font-size: 1.2em;
-                color: $preto;
-                font-weight: $semi;
-                margin: 16px 0;
-                text-align: center;
-            }
-
-            h4 {
-                font-size: 1.6em;
                 color: $vermelho;
                 font-weight: $exbold;
-                margin: 16px 0;
+                margin-bottom: 16px;
                 text-align: center;
             }
+
             .btn-add {
                 background: $vermelho;
                 font-weight: $semi;
                 border: none;
                 border-radius: 4px;
                 color: #fff;
-                font-size: 1.2em;
+                font-size: 1.1em;
                 padding: 10px;
                 display: block;
                 margin: 0 auto;
-                transition: .3s;
+                transition: 0.3s;
             }
             .btn-add:hover {
                 background: #bb3324;
-                transition: .3s;
+                transition: 0.3s;
             }
         }
     }

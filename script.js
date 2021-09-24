@@ -2,6 +2,7 @@ let favadd = document.querySelectorAll('.btn-add'),
     lista = Array.from(favadd);
 
 const comprar = document.getElementById('comprar');
+let listaC = document.querySelector('.c-itens');
 
 let carrinho = new Array();
 let produtos = new Array();
@@ -26,11 +27,10 @@ fetch('https://my-json-server.typicode.com/oliverids/gestao-de-cadastro/produtos
                                     <p id="info-nome">${json[index].nome}</p>
                                     <p id="info-preco">${'R$' + json[index].preco + ',00'}</p>
                                 </div>
+                                <button id="apaga"><i class="fas fa-times fa-lg"></i><span>Apagar</span></button>
                             </div>
-                            <button id="apaga">Apagar</button>
                         </li>
-                    `
-                    let listaC = document.querySelector('.c-itens');
+                    `;
                     listaC.appendChild(novoItem.firstElementChild);
                     carrinho.push(json[index].preco);
                     produtos.push(json[index].nome);
