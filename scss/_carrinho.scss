@@ -30,8 +30,6 @@
                 }
             }
 
-
-
             li {
                 display: block;
                 margin-bottom: 1em;
@@ -48,13 +46,28 @@
 
                 .info {
                     display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     align-items: center;
-                    justify-content: space-between;
+
+                    @media only screen and (min-width: 768px) {
+                        & {
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                    }
 
                     img {
                         width: 80px;
                         border-radius: 4px;
-                        margin-right: 12px;
+                        margin: 0 0 12px 0;
+
+                        @media only screen and (min-width: 768px) {
+                            & {
+                                margin: 0 12px 0 0;
+                            }
+                        }
                     }
 
                     div {
@@ -76,12 +89,18 @@
                 #apaga {
                     background: $vermelho;
                     border: none;
-                    margin-left: 1rem;
+                    margin: 1rem 0 0 0;
                     font-size: 1.1em;
                     font-weight: $bold;
                     color: $branco;
                     border-radius: 4px;
                     transition: 0.3s;
+
+                    @media only screen and (min-width: 768px) {
+                        & {
+                            margin: 0 0 0 1rem;
+                        }
+                    }
 
                     i {
                         padding: 10px;

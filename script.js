@@ -14,6 +14,12 @@ fetch('https://my-json-server.typicode.com/oliverids/gestao-de-cadastro/produtos
         console.log(json)
         lista.forEach(e => {
             e.addEventListener('click', () => {
+                let carrinhoTopo = document.querySelector('.carrinho').offsetTop - 160;
+                window.scrollTo({
+                    top: carrinhoTopo,
+                    behavior: 'smooth'
+                })
+
                 let index = lista.indexOf(e);
 
                 //CRIA CARRINHO
@@ -33,7 +39,7 @@ fetch('https://my-json-server.typicode.com/oliverids/gestao-de-cadastro/produtos
                     `;
                     listaC.appendChild(novoItem.firstElementChild);
                     carrinho.push(json[index].preco);
-                    produtos.push(json[index].nome);
+                    produtos.push(json[index].nome);                    
 
                     //PREÇO
                     let total = document.querySelector('.total span');
