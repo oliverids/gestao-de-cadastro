@@ -48,8 +48,8 @@ fetch('https://my-json-server.typicode.com/oliverids/gestao-de-cadastro/produtos
                         let apaga = document.querySelectorAll('#apaga');
                         apaga.forEach(e => {
                             e.addEventListener('click', (event) => {
-                                listaC.removeChild(event.target.parentNode);
-                                let precoitem = event.target.previousElementSibling.children[1].children[1].innerText,
+                                listaC.removeChild(event.target.parentElement.parentElement.parentElement);
+                                let precoitem = event.target.parentNode.previousElementSibling.children[1].innerText,
                                     precoitem2 = parseInt(precoitem.substring(2, 5));
                                 soma -= precoitem2;
                                 total.innerText = `R$ ${soma},00`
